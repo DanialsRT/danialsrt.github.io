@@ -5,17 +5,18 @@
     <meta charset="utf-8">
     <TITLE>Расписание</TITLE>
     </HEAD>
+    <SCRIPT SRC=Расписание/Java.js LANGUAGE="JavaScript"></SCRIPT>
 <BODY>
     <table>
         <tbody>
           <tr>
-            <td colspan="2"></th>
+            <th colspan="2"></th>
             <th colspan="2">ИП-31</th>
           </tr>
           <tr>
             <th rowspan="5" class="vertical-text">Понедельник</th>
             <th rowspan="2">I</th>
-            <td colspan="2">Численные методы лек. ауд.353 (Матросов А.В.)</td>
+            <td colspan="2"><div id="ex3">Численные методы лек. ауд.353 (Матросов А.В.)</div></td>
           </tr>
           <tr>
             <td colspan="2">Теория вероятности лек. ауд.353 (Волкова Т.А.)</td>
@@ -116,16 +117,19 @@
           </tr>
           <tr>
             <th>III</th>
-            <td colspan="2">Теория игр и исследование операций пр. ауд.453 (Ланева И.В.)</td>
+            <td colspan="2"><div id="ex3">Теория игр и исследование операций пр. ауд.453 (Ланева И.В.)</div></td>
           </tr>
           <tr>
             <th rowspan="1">IV</th>
             <td colspan="2"></td>
           </tr>
-        </tbody>
-      </table>
+      </tbody>
+    </table>
       <div align="RIGHT">
         <a href="Главная страница/WEB/Index.html">WEB</a>
-        </div>
+      </div>
+      <div>
+        <input onclick="domRangehighlight('лек'); this.style.display = 'none';" type="button" value="Найти!">
+      </div>
 </BODY>
 </HTML> 
