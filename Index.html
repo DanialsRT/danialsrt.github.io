@@ -7,7 +7,11 @@
     </HEAD>
     <SCRIPT SRC=Расписание/Java.js LANGUAGE="JavaScript"></SCRIPT>
 <BODY>
-    <table>
+  <div id="timedisplay" align="CENTER"></div>
+  <div id="timedisplay1" align="CENTER"></div>
+  <div id="result" align="CENTER"></div>
+  <div id="n" align="CENTER"></div>
+    <table class="table">
         <tbody>
           <tr>
             <th colspan="2"></th>
@@ -16,19 +20,19 @@
           <tr>
             <th rowspan="5" class="vertical-text">Понедельник</th>
             <th rowspan="2">I</th>
-            <td colspan="2"><div id="ex3">Численные методы лек. ауд.353 (Матросов А.В.)</div></td>
+            <td colspan="2"><div id="pn11">Численные методы лек. ауд.353 (Матросов А.В.)</div></td>
           </tr>
           <tr>
-            <td colspan="2">Теория вероятности лек. ауд.353 (Волкова Т.А.)</td>
+            <td colspan="2"><div id="pn12">Теория вероятности лек. ауд.353 (Волкова Т.А.)</div></td>
           </tr>
           <tr>
             <th>II</th>
-            <td colspan="2">Численные методы пр. ауд.434 (Матросов А.В.)</td>
+            <td colspan="2"><div id="pn2">Численные методы пр. ауд.434 (Матросов А.В.)</div></td>
           </tr>
           <tr>
             <th>III</th>
             <td width=50%></td>
-            <td width=50%>Компьютерные сети пр. ауд.482 (Егоров А.Н.)</td>
+            <td width=50%><div id="pn3">Компьютерные сети пр. ауд.482 (Егоров А.Н.)</div></td>
           </tr>
           <tr>
             <th>IV</th>
@@ -37,42 +41,42 @@
           <tr>
             <th rowspan="4" class="vertical-text">Вторник</th>
             <th>I</th>
-            <td colspan="2">Теория игр лек. ауд.440 (Ланева И.В.)</td>
+            <td colspan="2"><div id="vt1">Теория игр лек. ауд.440 (Ланева И.В.)</div></td>
           </tr>
           <tr>
             <th>II</th>
-            <td colspan="2">Деловой иностранный язык</td>
+            <td colspan="2"><div id="vt2">Деловой иностранный язык</div></td>
           </tr>
           <tr>
             <th>III</th>
-            <td colspan="2">Теория вероятности пр. ауд.370 (Волкова Т.А.)</td>
+            <td colspan="2"><div id="vt3">Теория вероятности пр. ауд.370 (Волкова Т.А.)</div></td>
           </tr>
           <tr>
             <th>IV</th>
-            <td colspan="2">WEB-программирование пр. ауд.370</td>
+            <td colspan="2"><div id="vt4">WEB-программирование пр. ауд.370</div></td>
           </tr>
           <tr>
             <th rowspan="7" class="vertical-text">Среда</th>
             <th rowspan="2">I</th>
-            <td colspan="2"></td>
+            <td colspan="2"><div id="sr11"></div></td>
           </tr>
           <tr>
-            <td colspan="2">Экономическое обоснование проектов пр. ауд.381а (Григорян М.Г.)</td>
+            <td colspan="2"><div id="sr12">Экономическое обоснование проектов пр. ауд.381а (Григорян М.Г.)</div></td>
           </tr>
           <tr>
             <th>II</th>
-            <td colspan="2">Экономическое обоснование проектов лек. ауд.381а (Григорян М.Г.)</td>
+            <td colspan="2"><div id="sr2">Экономическое обоснование проектов лек. ауд.381а (Григорян М.Г.)</div></td>
           </tr>
           <tr>
             <th rowspan="2">III</th>
-            <td colspan="2">Психология делового общения лек. ауд.432</td>
+            <td colspan="2"><div id="sr3">Психология делового общения лек. ауд.432</div></td>
           </tr>
           <tr>
             <td colspan="2"></td>
           </tr>
           <tr>
             <th rowspan="2">IV</th>
-            <td colspan="2">Психология делового общения лек. ауд.432</td>
+            <td colspan="2"><div id="sr4">Психология делового общения лек. ауд.432</div></td>
           </tr>
           <tr>
             <td colspan="2"></td>
@@ -80,27 +84,27 @@
           <tr>
             <th rowspan="7" class="vertical-text">Четверг</th>
             <th rowspan="2">I</th>
-            <td colspan="2">Математическое моделирование подъемно-транспортных систем лек. ауд.442 (Афанасьев А.К.)</td>
+            <td colspan="2"><div id="ch11">Математическое моделирование подъемно-транспортных систем лек. ауд.442 (Афанасьев А.К.)</div></td>
           </tr>
           <tr>
-            <td colspan="2">Спектральный анализ лек. ауд.331 (Васин А.В.)</td>
+            <td colspan="2"><div id="ch12">Спектральный анализ лек. ауд.331 (Васин А.В.)</div></td>
           </tr>
           <tr>
             <th rowspan="2">II</th>
-            <td>Компьютерные сети пр. ауд.482 (Егоров А.Н.)</td>
-            <td>ММПТС пр. ауд.172 (Афанасьев А.К.)</td>
+            <td><div id="ch211">Компьютерные сети пр. ауд.482 (Егоров А.Н.)</div></td>
+            <td><div id="ch212">ММПТС пр. ауд.172 (Афанасьев А.К.)</div></td>
           </tr>
           <tr>
-            <td>ММПТС пр. ауд.172 (Афанасьев А.К.)</td>
-            <td>Компьютерные сети пр. ауд.482 (Егоров А.Н.)</td>
+            <td><div id="ch221">ММПТС пр. ауд.172 (Афанасьев А.К.)</div></td>
+            <td><div id="ch222">Компьютерные сети пр. ауд.482 (Егоров А.Н.)</div></td>
           </tr>
           <tr>
             <th>III</th>
-            <td colspan="2">Спектральный анализ пр. ауд.305 (Васин А.В.)</td>
+            <td colspan="2"><div id="ch3">Спектральный анализ пр. ауд.305 (Васин А.В.)</div></td>
           </tr>
           <tr>
             <th rowspan="2">IV</th>
-            <td colspan="2">Спектральный анализ пр. ауд.305 (Васин А.В.)</td>
+            <td colspan="2"><div id="ch4">Спектральный анализ пр. ауд.305 (Васин А.В.)</div></td>
           </tr>
           <tr>
             <td colspan="2"></td>
@@ -108,16 +112,16 @@
           <tr>
             <th rowspan="7" class="vertical-text">Пятница</th>
             <th>I</th>
-            <td colspan="1">Компьютерные сети пр. ауд.482 (Егоров А.Н.)</td>
+            <td colspan="1"><div id="pt1">Компьютерные сети пр. ауд.482 (Егоров А.Н.)</div></td>
             <td colspan="1"></td>
           </tr>
           <tr>
             <th>II</th>
-            <td colspan="2">Компьютерные сети лек. ауд.301 (Егоров А.Н.)</td>
+            <td colspan="2"><div id="pt2">Компьютерные сети лек. ауд.301 (Егоров А.Н.)</div></td>
           </tr>
           <tr>
             <th>III</th>
-            <td colspan="2"><div id="ex3">Теория игр и исследование операций пр. ауд.453 (Ланева И.В.)</div></td>
+            <td colspan="2"><div id="pt3">Теория игр и исследование операций пр. ауд.453 (Ланева И.В.)</div></td>
           </tr>
           <tr>
             <th rowspan="1">IV</th>
@@ -127,9 +131,6 @@
     </table>
       <div align="RIGHT">
         <a href="Главная страница/WEB/Index.html">WEB</a>
-      </div>
-      <div>
-        <input onclick="domRangehighlight('лек'); this.style.display = 'none';" type="button" value="Найти!">
       </div>
 </BODY>
 </HTML> 

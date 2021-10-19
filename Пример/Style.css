@@ -21,17 +21,6 @@
 	cursor: pointer;
 }
 
-/* Hover */
-.table td:hover:after {
-	content: '';
-	position: absolute;
-	top: 0px;
-	right: 0px; 
-	bottom: 0px;    
-	left: 0px;
-	border: 3px solid #ffe5c5;
-}
-
 /* Click */
 .table td.active:after {
 	content: '';
