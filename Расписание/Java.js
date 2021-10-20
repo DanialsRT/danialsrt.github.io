@@ -2,14 +2,14 @@ function highlighting(){
     currentdate = new Date();
     var oneJan = new Date(currentdate.getFullYear(),0,1);
     var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
-    var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7);
-    if(result / 2 == 1)
+    var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7) - 1;
+    if(result % 2 == 0)
     {
-      result = "Числитель";
+      result = "Знаменатель";
     }
     else
     {
-      result = "Знаменатель";
+      result = "Числитель";
     }
     document.getElementById('result').innerHTML = result;
     var days = ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
@@ -25,128 +25,122 @@ function highlighting(){
     //document.getElementById('timedisplay1').innerHTML = time;
     if(time > 900 && time <= 1105)
     {
-        if(n == 1)
-        {
-            if(result == "Числитель")
-            {
-                document.getElementById('pn11').style.color = 'red';
-            }
-            else
-            {
-                document.getElementById('pn12').style.color = 'red';
-            }
-        }
-        if(n == 2)
-        {
-            document.getElementById('vt1').style.color = 'red';
-        }
-        if(n == 3)
-        {
-            if(result == "Числитель")
-            {
-                document.getElementById('sr11').style.color = 'red';
-            }
-            else
-            {
-                document.getElementById('sr12').style.color = 'red';
-            }
-        }
-        if(n == 4)
-        {
-            if(result == "Числитель")
-            {
-                document.getElementById('ch11').style.color = 'red';
-            }
-            else
-            {
-                document.getElementById('ch12').style.color = 'red';
-            }
-        }
-        if(n == 5)
-        {
-            document.getElementById('pt1').style.color = 'red';
+        switch(n){
+            case 1:
+                if(result == "Числитель")
+                {
+                    document.getElementById('pn11').style.color = 'red';
+                }
+                else
+                {
+                    document.getElementById('pn12').style.color = 'red';
+                }
+                break;
+            case 2:
+                document.getElementById('vt1').style.color = 'red';
+                break;
+            case 3:
+                if(result == "Числитель")
+                {
+                    document.getElementById('sr11').style.color = 'red';
+                }
+                else
+                {
+                    document.getElementById('sr12').style.color = 'red';
+                }
+                break;
+            case 4:
+                if(result == "Числитель")
+                {
+                    document.getElementById('ch11').style.color = 'red';
+                }
+                else
+                {
+                    document.getElementById('ch12').style.color = 'red';
+                }
+                break;
+            case 5:
+                document.getElementById('pt1').style.color = 'red';
+                break;
+            default :
         }
     }
     if(time > 1105 && time <= 1250)
     {
-        if(n == 1)
-        {
-            document.getElementById('pn2').style.color = 'red';
-        }
-        if(n == 2)
-        {
-            document.getElementById('vt2').style.color = 'red';
-        }
-        if(n == 3)
-        {
-            document.getElementById('sr2').style.color = 'red';
-        }
-        if(n == 4)
-        {
-            if(result == "Числитель")
-            {
-                document.getElementById('ch211').style.color = 'red';
-                document.getElementById('ch212').style.color = 'red';
-            }
-            else
-            {
-                document.getElementById('ch221').style.color = 'red';
-                document.getElementById('ch222').style.color = 'red';
-            }
-        }
-        if(n == 5)
-        {
-            document.getElementById('pt2').style.color = 'red';
+        switch(n){
+            case 1:
+                document.getElementById('pn2').style.color = 'red';
+                break;
+            case 2:
+                document.getElementById('vt2').style.color = 'red';
+                break;
+            case 3:
+                document.getElementById('sr2').style.color = 'red';
+                break;
+            case 4:   
+                if(result == "Числитель")
+                {
+                    document.getElementById('ch211').style.color = 'red';
+                    document.getElementById('ch212').style.color = 'red';
+                }
+                else
+                {
+                    document.getElementById('ch221').style.color = 'red';
+                    document.getElementById('ch222').style.color = 'red';
+                }
+                break;
+            case 5:
+                document.getElementById('pt2').style.color = 'red';
+                break;
+            default:
         }
     }
     if(time > 1300 && time <= 1510)
     {
-        if(n == 1)
-        {
-            document.getElementById('pn3').style.color = 'red';
-        }
-        if(n == 2)
-        {
-            document.getElementById('vt3').style.color = 'red';
-        }
-        if(n == 3)
-        {
-            if(result == "Числитель")
-            {
-                document.getElementById('sr3').style.color = 'red';
-            }
-        }
-        if(n == 4)
-        {
-            document.getElementById('ch3').style.color = 'red';
-        }
-        if(n == 5)
-        {
-            document.getElementById('pt3').style.color = 'red';
+        switch(n){
+            case 1:
+                document.getElementById('pn3').style.color = 'red';
+                break;
+            case 2:    
+                document.getElementById('vt3').style.color = 'red';
+                break;
+            case 3:
+                if(result == "Числитель")
+                {
+                    document.getElementById('sr3').style.color = 'red';
+                }
+                break;
+            case 4:
+                document.getElementById('ch3').style.color = 'red';
+                break;
+            case 5:
+                document.getElementById('pt3').style.color = 'red';
+                break;
+            default:
         }
     }
     if(time > 1510 && time <= 1655)
     {
-        if(n == 2)
-        {
-            document.getElementById('vt4').style.color = 'red';
-        }
-        if(n == 3)
-        {
-            if(result == "Числитель")
-            {
-                document.getElementById('sr4').style.color = 'red';
-            }
-        }
-        if(n == 4)
-        {
-            if(result == "Числитель")
-            {
-                document.getElementById('ch4').style.color = 'red';
-            }
+        switch(n){
+            case 2:
+                document.getElementById('vt4').style.color = 'red';
+                break;
+            case 3:    
+                if(result == "Числитель")
+                {
+                    document.getElementById('sr4').style.color = 'red';
+                }
+                break;
+            case 4:
+                if(result == "Числитель")
+                {
+                    document.getElementById('ch4').style.color = 'red';
+                }
+                break;
+            default:
         }
     }
-  }
+}
   setInterval(highlighting, 0);
   
   function getDate(){

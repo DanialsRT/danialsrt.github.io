@@ -1,11 +1,9 @@
-.vertical-text{
-  writing-mode: tb-rl;
-  transform: rotate(180deg);
-  font-size: 18px;
-  padding-left: 0px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-right: 10px;
+.vertical-text {
+    writing-mode: tb-rl;
+	transform:rotate(180deg);
+    font-size: 18px;
+	margin: 0px;
+	padding: 0px;
 }
 .table {
 	border-collapse: collapse;
@@ -13,9 +11,19 @@
 	width: 100%;
 }
 .table th, .table td {
-	border: 2px solid #888;
+	border: 3px solid #888;
 	padding: 10px;
 	text-align: center;
 	vertical-align: middle;
+	position: relative;
+}
+.nedelya {
+	text-align: center;
+	color: #252540;
+	font-family: arial;
+	font-size: 17px;
+	font-style: italic;
+	line-height: 1.45;
+	padding: 15px 38px;
 	position: relative;
 }
