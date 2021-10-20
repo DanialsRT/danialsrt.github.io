@@ -141,28 +141,28 @@ function highlighting(){
         }
     }
 }
-  setInterval(highlighting, 0);
+setInterval(highlighting, 0);
   
-  function getDate(){
-      var date = new Date();
-      var day = date.getDate();
-      var month = (date.getMonth() + 1);
-      var year = (date.getYear()-100);
-      var hours = date.getHours();
-      var minutes = date.getMinutes();
-      var seconds = date.getSeconds();
-      if(seconds < 10)
-      {
-          seconds = '0' + seconds;
-      }
-      if(minutes < 10)
-      {
-          minutes = '0' + minutes;
-      }
-      if(hours < 10)
-      {
-          hours = '0' + hours;
-      }
-      //document.getElementById('timedisplay').innerHTML = day + '.' + month + '.' + year + ' ' + hours + ':' + minutes + ':' + seconds;
-  }
-  setInterval(getDate, 0);
+function getDate(){
+    var date = new Date();
+    var day = date.getDate();
+    var month = (date.getMonth() + 1);
+    var year = (date.getYear()-100);
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    if(seconds < 10)
+    {
+        seconds = '0' + seconds;
+    }
+    if(minutes < 10)
+    {
+        minutes = '0' + minutes;
+    }
+    if(hours < 10)
+    {
+        hours = '0' + hours;
+    }
+    //document.getElementById('timedisplay').innerHTML = day + '.' + month + '.' + year + ' ' + hours + ':' + minutes + ':' + seconds;
+}
+//setInterval(getDate, 0);
