@@ -22,9 +22,6 @@ function highlighting(){
   var time = 0;
   hours = hours * 100;
   time = hours + minutes;
-  time = 1400;
-  n = 5;
-  result = "Числитель";
   //document.getElementById('timedisplay1').innerHTML = time;
   if(time > 900 && time <= 1105)
   {
@@ -170,20 +167,3 @@ function getDate(){
   //document.getElementById('timedisplay').innerHTML = day + '.' + month + '.' + year + ' ' + hours + ':' + minutes + ':' + seconds;
 }
 //setInterval(getDate, 0);
-
-function Sec()
- {
-   if(result == "Числитель")
-   {
-   	   location.replace("Index2.html");
-   }
-   else
-   {
-       location.replace("Index1.html");
-   }
-
-   // вызываем фунцию Sec() через одну секунду определённое в переменной sec
-   // количество раз - в нашем примере sec==10 (задержка редиректа на 10 сек)
-   
- }
- setInterval(Sec(), 0);
