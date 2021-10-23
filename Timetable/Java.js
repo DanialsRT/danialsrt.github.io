@@ -3,6 +3,12 @@ function highlighting(){
   var oneJan = new Date(currentdate.getFullYear(),0,1);
   var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
   var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7) - 1;
+  Date.prototype.getWeek = function() {
+    var onejan = new Date(this.getFullYear(), 0, 1);
+    return Math.ceil((((this - onejan) / 86400000) + onejan.getDay() + 1) / 7);
+    }
+
+    var result = (new Date()).getWeek();
   if(result % 2 == 0)
   {
     result = "Знаменатель";
