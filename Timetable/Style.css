@@ -254,8 +254,7 @@ td,th
 @font-face
 {
 	font-family: Glyphicons Halflings;
-	src: url(../../static/media/glyphicons-halflings-regular.eot?f4769f9b);
-	src: url(../../static/media/glyphicons-halflings-regular.eot?f4769f9b?#iefix) format("embedded-opentype"),url(../../static/media/glyphicons-halflings-regular.woff2?448c34a5) format("woff2"),url(../../static/media/glyphicons-halflings-regular.woff?fa277232) format("woff"),url(../../static/media/glyphicons-halflings-regular.ttf?e18bbf61) format("truetype"),url(../../static/media/glyphicons-halflings-regular.svg?89889688#glyphicons_halflingsregular) format("svg");
+	src: url(glyphicons-halflings-regular.woff2?448c34a5);
 }
 .glyphicon
 {
