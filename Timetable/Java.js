@@ -7,7 +7,6 @@ function highlighting(){
     var onejan = new Date(this.getFullYear(), 0, 1);
     return Math.ceil((((this - onejan) / 86400000) + onejan.getDay() + 1) / 7);
     }
-
     var result = (new Date()).getWeek();
   if(result % 2 == 0)
   {
