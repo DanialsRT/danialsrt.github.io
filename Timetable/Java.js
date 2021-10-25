@@ -10,13 +10,13 @@ function highlighting(){
     var result = (new Date()).getWeek();
   if(result % 2 == 0)
   {
-    result = "Знаменатель";
+    result = "Числитель";
   }
   else
   {
-    result = "Числитель";
+    result = "Знаменатель";
   }
-  document.getElementById('result').innerHTML = result;
+  //document.getElementById('result').innerHTML = result;
   var days = ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
   var ds = new Date();
   var n = ds.getDay();
@@ -147,7 +147,9 @@ function highlighting(){
       }
   }
 }
-setInterval(highlighting, 0);
+window.addEventListener("load",function(){
+    highlighting();
+});
 
 function getDate(){
   var date = new Date();
