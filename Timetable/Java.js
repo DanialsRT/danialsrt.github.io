@@ -9,7 +9,6 @@ function highlighting(){
       }
     var mydate = new Date;
     result = mydate.getWeek();
-    console.log(result);
   if(result % 2 == 1)
   {
     result = "Числитель";
