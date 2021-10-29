@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Ubuntu:400,700);
 html
 {
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	font-family: Ubuntu,Tahoma,Helvetica Neue,Helvetica,Arial,sans-serif;
 	-ms-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
@@ -99,7 +99,7 @@ pre
 }
 code,kbd,pre,samp
 {
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	/*font-family: Georgia, 'Times New Roman', Times, serif;*/
 	font-size: 1em;
 }
 button,input,optgroup,select,textarea
@@ -1314,7 +1314,7 @@ body
 {
 	background-color: #fff;
 	color: #333;
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	/*font-family: Georgia, 'Times New Roman', Times, serif;*/
 	font-size: 14px;
 	line-height: 1.42857143;
 }
