@@ -1,14 +1,16 @@
 function highlighting(){
-  currentdate = new Date();
-  var oneJan = new Date(currentdate.getFullYear(),0,1);
-  var numberOfDays = Math.floor((currentdate - oneJan) / (24 * 60 * 60 * 1000));
-  var result = Math.ceil(( currentdate.getDay() + 1 + numberOfDays) / 7) - 1;
-  Date.prototype.getWeek = function() {
-    var onejan = new Date(this.getFullYear(), 0, 1);
-    return Math.ceil((((this - onejan) / 86400000) + onejan.getDay() + 1) / 7);
-    }
-    var result = (new Date()).getWeek();
-  if(result % 2 == 0)
+    Date.prototype.getWeek = function() {
+        var date = new Date(this.getTime());
+        date.setHours(0, 0, 0, 0);
+        date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+        var week1 = new Date(date.getFullYear(), 0, 4);
+        result = 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+        return result;
+      }
+    var mydate = new Date;
+    result = mydate.getWeek();
+    console.log(result);
+  if(result % 2 == 1)
   {
     result = "Числитель";
   }
