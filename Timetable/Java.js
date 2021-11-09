@@ -9,6 +9,7 @@ function highlighting(){
       }
     var mydate = new Date;
     result = mydate.getWeek();
+    console.log(result);
   if(result % 2 == 1)
   {
     result = "Числитель";
@@ -17,6 +18,7 @@ function highlighting(){
   {
     result = "Знаменатель";
   }
+  console.log(result);
   //document.getElementById('result').innerHTML = result;
   var days = ['Воскресенье','Понедельник','Вторник','Среда','Четверг','Пятница','Суббота'];
   var ds = new Date();
