@@ -1,5 +1,4 @@
 function pressure(Value, Code) {
-  myFuncCalls1++;
   //1 Па = 0.007500616827041699 мм рт ст
   if (Code == 1){ //1 из Па в мм рт. ст.
     Result = Value * 760 / 101325;
@@ -34,17 +33,86 @@ function srdch() {
 }
 
 var myFuncCalls1 = 0;
+function myFunction1()
+{
+  myFuncCalls1++; 
+  alert('Функция вызвана');
+  return myFuncCalls1;
+}
 
 var myFuncCalls2 = 0;
+function myFunction2()
+{
+  myFuncCalls2++; 
+  alert('Функция вызвана');
+  return myFuncCalls2;
+}
 
-function myFunction1()
+function myFunctionCall1()
 {
      otv = "Первая функция была вызвана " + myFuncCalls1 + " раз/раза";
      return otv;
 }
 
-function myFunction2()
+function myFunctionCall2()
 {
      otv = "Вторая функция была вызвана " + myFuncCalls2 + " раз/раза";
      return otv;
+}
+
+function firstUserAction() {
+  //Запрос код - типа перевода измерений давления
+  let code = prompt('Выбирете режим перевода: \n' +
+      '0 : Из mm в ПА \n' + '1 : Из Па в mm', 0);
+  //Проверка на корректность ввода - либо 1, либо 0
+  if(code != 1 && code != 0) {
+      alert("Некорректный выбор")
+      location.reload();
+      return;
+  }
+  //Запрос значения - давление в каком-либо из измерений
+  let value = prompt('Введите значение:', 101325);
+  //Проверка на корректность ввода - любое число
+  if(isNaN(parseFloat(value)))
+  {
+      alert("Некорректный выбор")
+      location.reload();
+      return;
+  }
+  //Получение через селекторы расположения под кнопокой и реализация создания эл-та
+  //Путем добавления аттрибутов и тегов(через Child и Node)
+  //Благодаря такому подходу можно обновлять динамически таблицу без перезапуска страницы
+  //Постоянно нажимать на кнопку, вводить данные и прорисовывать таблицу
+  let body = document.querySelector('.table');
+  let tbdy = document.createElement('tbody');
+  let tbl = document.createElement('table');
+  tbl.style.width = '100%';
+  tbl.setAttribute('border', '1');
+  for (let i = 0; i < 1; i++) {
+      let tr = document.createElement('tr');
+      for (let j = 0; j < 2; j++) {
+          if (i == 1 && j == 1) {
+              break;
+          } else {
+              let td = document.createElement('td');
+
+              if (j == 0 && code == 0) td.innerText = `${value} mm`;
+              else if (j == 0 && code == 1) td.innerText = `${value} Па`;
+
+              if (j == 1 && code == 0) td.innerText = `${pressure(value,code)} Па`;
+              else if (j == 1 && code == 1) td.innerText = `${pressure(value,code)} mm`;
+
+              td.appendChild(document.createTextNode('\u0020'))
+              i == 1 && j == 1 ? td.setAttribute('rowSpan', '2') : null;
+              tr.appendChild(td)
+          }
+      }
+      tbdy.appendChild(tr);
+  }
+  tbl.appendChild(tbdy);
+  body.appendChild(tbl);
+}
+
+function pressure(value,code) {
+  return code == 0 ? value * (101325/760) : value * (760/101325);
 }

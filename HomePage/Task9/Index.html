@@ -7,30 +7,37 @@
   </HEAD>
     <SCRIPT SRC=Java.js LANGUAGE="JavaScript"></SCRIPT>
   <body>
+    <div class='First'>
+      <p>1) Пересчет давления</p>
+      <input type="button" onclick="firstUserAction()" value="Пересчет давления">
+      <br>
+      <div class="table"></div>
+      <p class="table"></p>
+      <br>
+  </div>
     <div>
-      1)
-    </div>
-    <p>
-      <input type="submit" id="submit" onclick="Value=prompt('Какое давление?');code=prompt('Куда переводить? Код пересчета - 0 из мм рт. ст. в Па, 1 из Па в мм рт. ст.');pressure(Value, code)" value="Запустить">
-    </p>
-    <div class="sum"></div>
-    <div>
-      2)
+      2) Среднее арифмитическое
     </div>
     <p>
       <input type="submit" id="submit" onclick ="arr = srdch();alert(arr)" value="Запустить">
     </p>
     <div>
-      3.1)
+      3.1) Вызов и подсчет первой функций
     </div>
     <p>
-      <input type="submit" id="submit" onclick ="arr = myFunction1();alert(arr)" value="Запустить">
+      <input type="submit" id="submit" onclick ="myFunction1();" value="Вызвать первую функцию">
+    </p>
+    <p>
+      <input type="submit" id="submit" onclick ="arr = myFunctionCall1();alert(arr)" value="Узнать кол-во вызовов первой функции">
     </p>
     <div>
-      3.2)
+      3.2) Вызов и подсчет второй функции
     </div>
     <p>
-      <input type="submit" id="submit" onclick ="arr = myFunction2();alert(arr)" value="Запустить">
+      <input type="submit" id="submit" onclick ="myFunction2();" value="Вызвать вторую функцию">
+    </p>
+    <p>
+      <input type="submit" id="submit" onclick ="arr = myFunctionCall2();alert(arr)" value="Узнать кол-во вызовов второй функции">
     </p>
   </body>
 </html>
