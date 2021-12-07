@@ -96,11 +96,15 @@ function firstUserAction() {
           } else {
               let td = document.createElement('td');
 
-              if (j == 0 && code == 0) td.innerText = `${value} mm`;
-              else if (j == 0 && code == 1) td.innerText = `${value} Па`;
+              if (j == 0 && code == 0) 
+                  td.innerText = `${value} mm`;
+              else if (j == 0 && code == 1) 
+                  td.innerText = `${value} Па`;
 
-              if (j == 1 && code == 0) td.innerText = `${pressure(value,code)} Па`;
-              else if (j == 1 && code == 1) td.innerText = `${pressure(value,code)} mm`;
+              if (j == 1 && code == 0) 
+                  td.innerText = `${pressure(value,code)} Па`;
+              else if (j == 1 && code == 1) 
+                  td.innerText = `${pressure(value,code)} mm`;
 
               td.appendChild(document.createTextNode('\u0020'))
               i == 1 && j == 1 ? td.setAttribute('rowSpan', '2') : null;

@@ -1,20 +1,101 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <HEAD>
-    <link rel="stylesheet" type="text/css" href="Style.css">
+<head>
+    <script src="Java.js"></script>
     <meta charset="UTF-8">
     <title>16.11</title>
-  </HEAD>
-    <SCRIPT SRC=Java.js LANGUAGE="JavaScript"></SCRIPT>
-  <body>
-    <p>
-      <input type="submit" id="submit" onclick ="a = Stack();alert(a)" value="Создать Stack">
-    </p>
-    <p>
-      <input type="submit" id="submit" onclick ="a = prompt('Введите значение, которое хотите добавить в Stack:');Stack.prototype.push(a);" value="Добавить элемент в Stack">
-    </p>
-    <p>
-      <input type="submit" id="submit" onclick ="a = Stack.prototype.pop();"alert(a); value="Получить последний элемент из Stack">
-    </p>
-  </body>
+</head>
+<body>
+
+    <div>
+        <div>Задание 1</div>
+        <input type="button" value="Показать элементы стека" onclick="alert(container.print())">
+        <br>
+        <input type="button" value="Добавить элемент в начало стека" onclick="let promt = prompt('Введите элемент');container.unshift(promt);alert(`${promt} добавлено в начало стека`);">
+        <br>
+        <input type="button" value="Удалить элемент в начале стека" onclick="alert(`${container.shift()} удален с начала`)">
+        <br>
+        <input type="button" value="Добавить элемент в конец стека" onclick="let promt = prompt('Введите элемент');container.push(promt);alert(`${promt} добвлено в конец стека`);">
+        <br>
+        <input type="button" value="Удалить элемент в конце стека" onclick="alert(`${container.pop()} удален с конца`)">
+        <br>
+        <input type="button" value="Возвращает элемент по указанному индексу" onclick="let promt = prompt('Введите индекс');alert(`Индекс ${promt} имел позицию ${container.getByIndex(promt)}`)">
+    </div>
+
+    <p></p>
+
+    <div>
+        <div>Задание 2</div>
+        <input type="button" value="Сортировка по возрастанию" onclick="alert(enterSorting(sortStringAscending))">
+        <input type="button" value="Сортировка по убыванию" onclick="alert(enterSorting(sortStringDescending))">
+    </div>
+
+    <p></p>
+
+    <div>
+        <div>Задание 3</div>
+            <input type="button" value="Получить сечение" onclick="
+                let promt = prompt('Введите сечение(индекс строки)');
+                let matrix = generateMatrix();
+                alert(`Начальная матрица: \n ${matrix[0]}\n ${matrix[1]}\n ${matrix[2]}\n Cечение ${matrixSpecial(matrix,2,parseInt(promt))}`)">
+    </div>
+
+    <p></p>
+
+    <div>Задание 4</div>
+    <style>
+            table {
+                border-collapse: collapse;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            td,
+            th {
+                border: 1px solid black;
+                padding: 3px;
+                text-align: center;
+            }
+            th {
+                font-weight: bold;
+                background-color: #E6E6E6;
+            }
+    </style>
+    <div id="calendar" class="Forth">
+            <script>createCalendar(calendar);</script>
+    </div>
+
+    <p></p>
+
+    <div>
+        <div>Задание 5</div>
+        <input type="button" value="Начать поиск" onclick="
+                let promt1 = prompt('Введите начальную строку');
+                let promt2 = prompt('Введите, что нужно найти в строке');
+                alert(`В строке ${promt1} нашлось ${promt2} - ${implementCounter(promt1,promt2)} раз`);
+">
+    </div>
+
+    <p></p>
+
+    <div>
+        <div>Задание 6</div>
+        <div>f(x) = exp x</div>
+         <div id="tableFunc1">
+        <script>createFunctionTable(tableFunc1,func1)</script>
+             <p></p>
+         </div>
+         <div>Задание 7</div>
+         <div>f(x) = (x+cosx)/sinx</div>
+        <div id="tableFunc2">
+            <script>createFunctionTable(tableFunc2,func2)</script>
+            <p></p>
+        </div>
+        <div>Задание 8</div>
+        <div>f(x) = 1/ln(1+x)-1/x</div>
+        <div id="tableFunc3">
+            <script>createFunctionTable(tableFunc3,func3)</script>
+        </div>
+    </div>
+
+</body>
 </html>
