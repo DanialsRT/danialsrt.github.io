@@ -60,18 +60,32 @@ function myFunctionCall2()
      return otv;
 }
 
-function firstUserAction() {
+function action(){
   //Запрос код - типа перевода измерений давления
   let code = prompt('Выбирете режим перевода: \n' +
       '0 : Из mm в ПА \n' + '1 : Из Па в mm', 0);
-  //Проверка на корректность ввода - либо 1, либо 0
+      //Проверка на корректность ввода - либо 1, либо 0
   if(code != 1 && code != 0) {
-      alert("Некорректный выбор")
-      location.reload();
-      return;
+    alert("Некорректный выбор")
+    location.reload();
+    return;
   }
   //Запрос значения - давление в каком-либо из измерений
-  let value = prompt('Введите значение:', 101325);
+  let value = prompt('Введите начальное значение:', 101325);
+  let value1 = prompt('Введите конечное значение:', 102325);
+  let step = prompt('Введите шаг:', 10);
+  console.log(value);
+  console.log(value1);
+  console.log(step);
+  for (let j = value; j <= value1; j = Number(j) + Number(step)){
+    console.log(j);
+    firstUserAction(j,code);
+  }
+  return;
+}
+
+function firstUserAction(value,code) {
+  
   //Проверка на корректность ввода - любое число
   if(isNaN(parseFloat(value)))
   {
