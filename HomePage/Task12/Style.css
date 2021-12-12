@@ -1,0 +1,16 @@
+/* Unvisited links */
+a:link {
+    color: blue;
+  }
+  /* Visited links */
+  a:visited {
+    color: purple;
+  }
+  /* User hovers */
+  a:hover {
+    background: yellow;
+  }
+  /* Active links */
+  a:active {
+    color: lime;
+  }

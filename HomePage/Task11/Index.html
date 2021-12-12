@@ -5,8 +5,28 @@
     <meta charset="UTF-8">
     <title>07.12</title>
 </head>
-<body>
-
-    
+<body> 
+    <p id=MyText>
+        Что <i>мо<b>ж</b>но</i> менять, <b>когда документ загружен</b>!
+    </p>
+    <div>
+    <p><b>InnerText:</b> <input id=ID1 type="text" value="Что можно менять, когда документ загружен!"><input type="button" value="Изменить" onclick="action1()"></p>
+    <p><b>OuterText:</b> <input id=ID2 type="text" value="Что можно менять, когда документ загружен!"><input type="button" value="Изменить" onclick="action2()"></p>
+    <p><b>InnerHTML:</b> <input id=ID3 type="text" value="Что <i>мо<b>ж</b>но</i> менять, <b>когда документ загружен</b>!"><input type="button" value="Изменить" onclick="action3()"></p>
+    <p><b>OuterHTML:</b> <input id=ID4 type="text" value="<p id=MyText>Что <i>мо<b>ж</b>но</i> менять, <b>когда документ загружен</b>!</p>"><input type="button" value="Изменить" onclick="action4()"></p>
+    <p><b>insertAdjacentText()</b> - Куда: <select id=ID5 insertAdjacentText="insertAdjacentText">
+        <option value="beforeBegin">beforeBegin</option>
+        <option value="afterBegin">afterBegin</option>
+        <option value="beforeEnd">beforeEnd</option>
+        <option value="afterEnd">afterEnd</option>
+      </select> - Что: <input id = ID51 type="text"><input type="button" value="Вставить" onclick="action5()"></p>
+      <p><b>insertAdjacentHTML()</b> - Куда: <select id=ID6 insertAdjacentHTML="insertAdjacentHTML">
+        <option value="beforeBegin">beforeBegin</option>
+        <option value="afterBegin">afterBegin</option>
+        <option value="beforeEnd">beforeEnd</option>
+        <option value="afterEnd">afterEnd</option>
+      </select> - Что: <input id = ID61 type="text"><input type="button" value="Вставить" onclick="action6()"></p>
+ 
+</div>
 </body>
 </html>
