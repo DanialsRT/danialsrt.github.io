@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="Style.css">
+    </head>
+    <body>
+        <div id="picContainer">
+            <img src="1.jpg" class="scale">
+            <img src="2.jpg" class="scale">
+            <img src="3.jpg" class="scale">
+            <img src="4.jpg" class="scale">
+            <img src="5.jpg" class="scale">
+        </div>
+        <div id="picHolder" style="display: none; background-image: url(&quot;https://html-plus.in.ua/wp-content/uploads/examples/js-examples/cups/cup4.png&quot;);"></div>
+    </body>
+    <script>
+        var picHolder = document.getElementById("picHolder");
+        var picContainer = document.getElementById("picContainer")
+
+        picContainer.addEventListener('mouseover', function(event) {
+            var target = event.target;
+            console.log(target.tagName);
+            if (target.tagName != "IMG")
+                picHolder.style.display = 'none';
+            else {
+                picHolder.style.backgroundImage = "url(" + target.src + ")";
+                picHolder.style.display = 'block';
+            }
+
+        });
+        picContainer.addEventListener('mouseout', function() {
+            picHolder.style.display = 'none';
+        });
+    </script>
+</html>
