@@ -1,0 +1,1 @@
+document.addEventListener("click", event => event.target.style.border = '4px solid black')
