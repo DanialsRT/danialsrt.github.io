@@ -191,7 +191,7 @@ var Reloaded  = function(){
   {
       if (location.href == "https://danialsrt.github.io/Timetable/Index2.html")
       {
-          console.log('Перешёл');
+          //console.log('Перешёл');
       }
       else
       {
@@ -203,7 +203,7 @@ var Reloaded  = function(){
   {
     if (location.href == "https://danialsrt.github.io/Timetable/Index1.html")
     {
-        console.log('Перешёл');
+        //console.log('Перешёл');
     }
     else
     {
