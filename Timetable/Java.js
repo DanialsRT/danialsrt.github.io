@@ -201,7 +201,6 @@ window.onload = function() {
   var loaded = sessionStorage.getItem('loaded');
   if(loaded) {
     Reloaded();
-  } else {
     sessionStorage.setItem('loaded', true);
   }
 }
