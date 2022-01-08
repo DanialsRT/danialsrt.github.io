@@ -29,9 +29,6 @@ function highlighting(){
   hours = hours * 100;
   time = hours + minutes;
   //document.getElementById('timedisplay1').innerHTML = time;
-  time = 1600;
-  n = 6;
-  result = 'Знаменатель'
   if(time > 900 && time <= 1105)
   {
       switch(n){
@@ -178,3 +175,33 @@ function getDate(){
   //document.getElementById('timedisplay').innerHTML = day + '.' + month + '.' + year + ' ' + hours + ':' + minutes + ':' + seconds;
 }
 //setInterval(getDate, 0);
+
+var Reloaded  = function(){
+    Date.prototype.getWeek = function() {
+        var date = new Date(this.getTime());
+        date.setHours(0, 0, 0, 0);
+        date.setDate(date.getDate() + 3 - (date.getDay() + 6) % 7);
+        var week1 = new Date(date.getFullYear(), 0, 4);
+        result = 1 + Math.round(((date.getTime() - week1.getTime()) / 86400000 - 3 + (week1.getDay() + 6) % 7) / 7);
+        return result;
+      }
+    var mydate = new Date;
+    result = mydate.getWeek();
+   if(result % 2 == 1)
+  {
+      location.replace("https://danialsrt.github.io/Timetable/Index2.html");
+  }
+  else
+  {
+      location.replace("https://danialsrt.github.io/Timetable/Index1.html");
+   }   
+} //страницу перезагрузили
+
+window.onload = function() {
+  var loaded = sessionStorage.getItem('loaded');
+  if(loaded) {
+    Reloaded();
+  } else {
+    sessionStorage.setItem('loaded', true);
+  }
+}
