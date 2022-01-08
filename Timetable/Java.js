@@ -189,18 +189,34 @@ var Reloaded  = function(){
     result = mydate.getWeek();
    if(result % 2 == 1)
   {
-      location.replace("https://danialsrt.github.io/Timetable/Index2.html");
+      if (location.href == "https://danialsrt.github.io/Timetable/Index2.html")
+      {
+          break;
+      }
+      else
+      {
+          location.replace("https://danialsrt.github.io/Timetable/Index2.html");
+      }
+      
   }
   else
   {
-      location.replace("https://danialsrt.github.io/Timetable/Index1.html");
+    if (location.href == "https://danialsrt.github.io/Timetable/Index1.html")
+    {
+        break;
+    }
+    else
+    {
+        location.replace("https://danialsrt.github.io/Timetable/Index1.html");
+    }
    }   
 } //страницу перезагрузили
 
 window.onload = function() {
   var loaded = sessionStorage.getItem('loaded');
-  if(loaded) {
+  if (loaded) {
     Reloaded();
+  } else {
     sessionStorage.setItem('loaded', true);
   }
 }
