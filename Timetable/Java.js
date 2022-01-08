@@ -29,18 +29,14 @@ function highlighting(){
   hours = hours * 100;
   time = hours + minutes;
   //document.getElementById('timedisplay1').innerHTML = time;
+  time = 1600;
+  n = 6;
+  result = 'Знаменатель'
   if(time > 900 && time <= 1105)
   {
       switch(n){
           case 1:
-              if(result == "Знаменатель")
-              {
-                  document.getElementById('pn11').style.color = 'red';
-              }
-              else
-              {
-                  document.getElementById('pn12').style.color = 'red';
-              }
+              document.getElementById('pn1').style.color = 'red';
               break;
           case 2:
               document.getElementById('vt1').style.color = 'red';
@@ -65,8 +61,8 @@ function highlighting(){
                   document.getElementById('ch12').style.color = 'red';
               }
               break;
-          case 5:
-              document.getElementById('pt1').style.color = 'red';
+          case 6:
+              document.getElementById('sb1').style.color = 'red';
               break;
           default :
       }
@@ -78,26 +74,16 @@ function highlighting(){
               document.getElementById('pn2').style.color = 'red';
               break;
           case 2:
-              document.getElementById('vt21').style.color = 'red';
-              document.getElementById('vt22').style.color = 'red';
+              document.getElementById('vt2').style.color = 'red';
               break;
           case 3:
               document.getElementById('sr2').style.color = 'red';
               break;
           case 4:   
-              if(result == "Числитель")
-              {
-                  document.getElementById('ch211').style.color = 'red';
-                  document.getElementById('ch212').style.color = 'red';
-              }
-              else
-              {
-                  document.getElementById('ch221').style.color = 'red';
-                  document.getElementById('ch222').style.color = 'red';
-              }
+              document.getElementById('ch2').style.color = 'red';
               break;
-          case 5:
-              document.getElementById('pt2').style.color = 'red';
+          case 6:
+              document.getElementById('sb2').style.color = 'red';
               break;
           default:
       }
@@ -112,16 +98,13 @@ function highlighting(){
               document.getElementById('vt3').style.color = 'red';
               break;
           case 3:
-              if(result == "Числитель")
-              {
-                  document.getElementById('sr3').style.color = 'red';
-              }
+              document.getElementById('sr3').style.color = 'red';
               break;
           case 4:
               document.getElementById('ch3').style.color = 'red';
               break;
-          case 5:
-              document.getElementById('pt3').style.color = 'red';
+          case 6:
+              document.getElementById('sb3').style.color = 'red';
               break;
           default:
       }
@@ -129,6 +112,16 @@ function highlighting(){
   if(time > 1510 && time <= 1655)
   {
       switch(n){
+          case 1:
+              if(result == "Числитель")
+              {
+                  document.getElementById('pn41').style.color = 'red';
+              }
+              else
+              {
+                  document.getElementById('pn42').style.color = 'red';
+              }
+              break;
           case 2:
               document.getElementById('vt4').style.color = 'red';
               break;
@@ -142,6 +135,16 @@ function highlighting(){
               if(result == "Числитель")
               {
                   document.getElementById('ch4').style.color = 'red';
+              }
+              break;
+          case 6:
+              if(result == "Числитель")
+              {
+                  document.getElementById('sb41').style.color = 'red';
+              }
+              else
+              {
+                  document.getElementById('sb42').style.color = 'red';
               }
               break;
           default:
