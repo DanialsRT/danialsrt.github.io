@@ -159,8 +159,29 @@ function getDate() {
 //setInterval(getDate, 0);
 
 function Week(k) {
-  let date = new Date();
   m = new Date();
+  Date.prototype.getWeek = function () {
+    let date = new Date(this.getTime());
+    date.setHours(0, 0, 0, 0);
+    date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));
+    let week1 = new Date(date.getFullYear(), 0, 4);
+    result =
+      1 +
+      Math.round(
+        ((date.getTime() - week1.getTime()) / 86400000 -
+          3 +
+          ((week1.getDay() + 6) % 7)) /
+          7
+      );
+    return result;
+  };
+  result = m.getWeek();
+  if (result % 2 == 1) {
+    result = "Числитель";
+  } else {
+    result = "Знаменатель";
+  }
+  //   console.log(result);
   DG = m.getYear();
   let days = [
     "воскресенье",
