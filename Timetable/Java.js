@@ -185,7 +185,7 @@ var Reloaded = function () {
   };
   var mydate = new Date();
   result = mydate.getWeek();
-  if (location.href == "https://danialsrt.github.io/Timetable/Index1.html") {
+  if (location.href == "https://danialsrt.github.io/Timetable/Index.html") {
   } else {
     if (result % 2 == 1) {
       if (
