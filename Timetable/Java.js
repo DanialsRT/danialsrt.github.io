@@ -185,15 +185,22 @@ var Reloaded = function () {
   };
   var mydate = new Date();
   result = mydate.getWeek();
-  if (result % 2 == 1) {
-    if (location.href == "https://danialsrt.github.io/Timetable/Index.html") {
-    } else {
-      location.replace("https://danialsrt.github.io/Timetable/Index2.html");
-    }
+  if (location.href == "https://danialsrt.github.io/Timetable/Index1.html") {
   } else {
-    if (location.href == "https://danialsrt.github.io/Timetable/Index.html") {
+    if (result % 2 == 1) {
+      if (
+        location.href == "https://danialsrt.github.io/Timetable/Index2.html"
+      ) {
+      } else {
+        location.replace("https://danialsrt.github.io/Timetable/Index2.html");
+      }
     } else {
-      location.replace("https://danialsrt.github.io/Timetable/Index1.html");
+      if (
+        location.href == "https://danialsrt.github.io/Timetable/Index1.html"
+      ) {
+      } else {
+        location.replace("https://danialsrt.github.io/Timetable/Index1.html");
+      }
     }
   }
 }; //страницу перезагрузили
