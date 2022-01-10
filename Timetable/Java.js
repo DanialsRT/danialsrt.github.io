@@ -160,7 +160,7 @@ function getDate() {
 
 function Week(k) {
   let date = new Date();
-  m = new Date(2022, 2, 2);
+  m = new Date();
   DG = m.getYear();
   let days = [
     "воскресенье",
@@ -191,7 +191,7 @@ function Week(k) {
   let D2 = m.getMonth();
   D1 == 0 ? (k1 = 1) : (k1 = 0);
   D1 == 0 ? (m = new Date(DG, D2, 0)) : (m = m);
-  D1 == 0 ? D1 = m.getDate() : (m = m);
+  D1 == 0 ? (D1 = m.getDate()) : (m = m);
   D0 = days[D0];
   D2 = month[D2 - k1];
   return D0 + ", " + D1 + " " + D2;
