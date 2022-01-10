@@ -213,7 +213,3 @@ window.onload = function () {
     sessionStorage.setItem("loaded", true);
   }
 };
-
-window.onbeforeunload = function () {
-  return "Есть несохранённые изменения. Всё равно уходим?";
-};
