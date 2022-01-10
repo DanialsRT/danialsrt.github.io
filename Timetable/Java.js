@@ -1,9 +1,9 @@
 function highlighting() {
   Date.prototype.getWeek = function () {
-    var date = new Date(this.getTime());
+    let date = new Date(this.getTime());
     date.setHours(0, 0, 0, 0);
     date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));
-    var week1 = new Date(date.getFullYear(), 0, 4);
+    let week1 = new Date(date.getFullYear(), 0, 4);
     result =
       1 +
       Math.round(
@@ -14,7 +14,7 @@ function highlighting() {
       );
     return result;
   };
-  var mydate = new Date();
+  let mydate = new Date();
   result = mydate.getWeek();
   if (result % 2 == 1) {
     result = "Числитель";
@@ -22,22 +22,13 @@ function highlighting() {
     result = "Знаменатель";
   }
   //document.getElementById('result').innerHTML = result;
-  var days = [
-    "Воскресенье",
-    "Понедельник",
-    "Вторник",
-    "Среда",
-    "Четверг",
-    "Пятница",
-    "Суббота",
-  ];
-  var ds = new Date();
-  var n = ds.getDay();
+  let ds = new Date();
+  let n = ds.getDay();
   //document.getElementById('n').innerHTML = n;
-  var date = new Date();
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var time = 0;
+  let date = new Date();
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let time = 0;
   hours = hours * 100;
   time = hours + minutes;
   //document.getElementById('timedisplay1').innerHTML = time;
@@ -147,13 +138,13 @@ window.addEventListener("load", function () {
 });
 
 function getDate() {
-  var date = new Date();
-  var day = date.getDate();
-  var month = date.getMonth() + 1;
-  var year = date.getYear() - 100;
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  var seconds = date.getSeconds();
+  let date = new Date();
+  let day = date.getDate();
+  let month = date.getMonth() + 1;
+  let year = date.getYear() - 100;
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  let seconds = date.getSeconds();
   if (seconds < 10) {
     seconds = "0" + seconds;
   }
@@ -167,49 +158,41 @@ function getDate() {
 }
 //setInterval(getDate, 0);
 
-var Reloaded = function () {
-  Date.prototype.getWeek = function () {
-    var date = new Date(this.getTime());
-    date.setHours(0, 0, 0, 0);
-    date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));
-    var week1 = new Date(date.getFullYear(), 0, 4);
-    result =
-      1 +
-      Math.round(
-        ((date.getTime() - week1.getTime()) / 86400000 -
-          3 +
-          ((week1.getDay() + 6) % 7)) /
-          7
-      );
-    return result;
-  };
-  var mydate = new Date();
-  result = mydate.getWeek();
-  if (location.href == "https://danialsrt.github.io/Timetable/Index.html") {
-  } else {
-    if (result % 2 == 1) {
-      if (
-        location.href == "https://danialsrt.github.io/Timetable/Index2.html"
-      ) {
-      } else {
-        location.replace("https://danialsrt.github.io/Timetable/Index2.html");
-      }
-    } else {
-      if (
-        location.href == "https://danialsrt.github.io/Timetable/Index1.html"
-      ) {
-      } else {
-        location.replace("https://danialsrt.github.io/Timetable/Index1.html");
-      }
-    }
-  }
-}; //страницу перезагрузили
-
-window.onload = function () {
-  var loaded = sessionStorage.getItem("loaded");
-  if (loaded) {
-    Reloaded();
-  } else {
-    sessionStorage.setItem("loaded", true);
-  }
-};
+function Week(k) {
+  let date = new Date();
+  m = new Date(2022, 2, 2);
+  DG = m.getYear();
+  let days = [
+    "воскресенье",
+    "понедельник",
+    "вторник",
+    "среда",
+    "четверг",
+    "пятница",
+    "суббота",
+  ];
+  let month = [
+    "января",
+    "февраля",
+    "марта",
+    "апреля",
+    "мая",
+    "июня",
+    "июля",
+    "авгутса",
+    "сентября",
+    "октября",
+    "ноября",
+    "декабря",
+  ];
+  let D3 = m.getDay();
+  let D0 = k;
+  let D1 = m.getDate() + k - D3;
+  let D2 = m.getMonth();
+  D1 == 0 ? (k1 = 1) : (k1 = 0);
+  D1 == 0 ? (m = new Date(DG, D2, 0)) : (m = m);
+  D1 == 0 ? D1 = m.getDate() : (m = m);
+  D0 = days[D0];
+  D2 = month[D2 - k1];
+  return D0 + ", " + D1 + " " + D2;
+}

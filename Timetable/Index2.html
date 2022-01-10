@@ -31,7 +31,9 @@
       <div class="panel-group" id="accordion">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">понедельник</h4>
+            <h4 class="panel-title block">
+              <div class="ID1">понедельник</div>
+            </h4>
           </div>
           <ul class="panel-collapse nopadding nomargin">
             <li class="common-list-item row" id="pn2">
@@ -1032,8 +1034,24 @@
       </div>
     </div>
     <br />
-    <a href="Index.html"
+    <a href="../Index.html"
       ><div align="CENTER" class="nedelya">Следующая неделя</div></a
     >
   </body>
+  <script>
+     
+    function change() {
+      let par1 = document.querySelector(".ID1");
+      par1.innerHTML = Week(1);
+      let par2 = document.querySelector(".ID2");
+      par2.innerHTML = Week(2);
+      let par3 = document.querySelector(".ID3");
+      par3.innerHTML = Week(3);
+      let par4 = document.querySelector(".ID4");
+      par4.innerHTML = Week(4);
+      let par6 = document.querySelector(".ID6");
+      par6.innerHTML = Week(6);
+    }
+    change();
+  </script>
 </html>
