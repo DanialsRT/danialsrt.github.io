@@ -1,19 +1,20 @@
+Date.prototype.getWeek = function () {
+  let date = new Date(this.getTime());
+  date.setHours(0, 0, 0, 0);
+  date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));
+  let week1 = new Date(date.getFullYear(), 0, 4);
+  result =
+    1 +
+    Math.round(
+      ((date.getTime() - week1.getTime()) / 86400000 -
+        3 +
+        ((week1.getDay() + 6) % 7)) /
+        7
+    );
+  return result;
+};
+
 function highlighting() {
-  Date.prototype.getWeek = function () {
-    let date = new Date(this.getTime());
-    date.setHours(0, 0, 0, 0);
-    date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));
-    let week1 = new Date(date.getFullYear(), 0, 4);
-    result =
-      1 +
-      Math.round(
-        ((date.getTime() - week1.getTime()) / 86400000 -
-          3 +
-          ((week1.getDay() + 6) % 7)) /
-          7
-      );
-    return result;
-  };
   let mydate = new Date();
   result = mydate.getWeek();
   if (result % 2 == 1) {
@@ -159,30 +160,7 @@ function getDate() {
 //setInterval(getDate, 0);
 
 function Week(k) {
-  m = new Date();
-  Date.prototype.getWeek = function () {
-    let date = new Date(this.getTime());
-    date.setHours(0, 0, 0, 0);
-    date.setDate(date.getDate() + 3 - ((date.getDay() + 6) % 7));
-    let week1 = new Date(date.getFullYear(), 0, 4);
-    result =
-      1 +
-      Math.round(
-        ((date.getTime() - week1.getTime()) / 86400000 -
-          3 +
-          ((week1.getDay() + 6) % 7)) /
-          7
-      );
-    return result;
-  };
-  result = m.getWeek();
-  if (result % 2 == 1) {
-    result = "Числитель";
-  } else {
-    result = "Знаменатель";
-  }
-  //   console.log(result);
-  DG = m.getYear();
+  let m = new Date();
   let days = [
     "воскресенье",
     "понедельник",
@@ -206,14 +184,19 @@ function Week(k) {
     "ноября",
     "декабря",
   ];
-  let D3 = m.getDay();
   let D0 = k;
-  let D1 = m.getDate() + k - D3;
-  let D2 = m.getMonth();
-  D1 == 0 ? (k1 = 1) : (k1 = 0);
-  D1 == 0 ? (m = new Date(DG, D2, 0)) : (m = m);
-  D1 == 0 ? (D1 = m.getDate()) : (m = m);
+  D0 > 7 ? (D0 -= 7) : D0;
+  let DG = m.getYear(); //Год
+  let D3 = m.getDay(); //День недели
+  let D1 = m.getDate(); //День
+  let D2 = m.getMonth(); //Месяц
+  console.log;
+  m = new Date(DG, D2, D1 + k - D3);
+  DG = m.getYear(); //Год
+  D1 = m.getDate(); //День
+  D2 = m.getMonth(); //Месяц
   D0 = days[D0];
-  D2 = month[D2 - k1];
+  D2 = month[D2];
+  console.log(D0 + ", " + D1 + " " + D2);
   return D0 + ", " + D1 + " " + D2;
 }

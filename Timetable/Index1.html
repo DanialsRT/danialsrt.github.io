@@ -1047,16 +1047,31 @@
   </body>
   <script>
     function change() {
-      let par1 = document.querySelector(".ID1");
-      par1.innerHTML = Week(1);
-      let par2 = document.querySelector(".ID2");
-      par2.innerHTML = Week(2);
-      let par3 = document.querySelector(".ID3");
-      par3.innerHTML = Week(3);
-      let par4 = document.querySelector(".ID4");
-      par4.innerHTML = Week(4);
-      let par6 = document.querySelector(".ID6");
-      par6.innerHTML = Week(6);
+      date = new Date();
+      result = date.getWeek();
+      if (result % 2 == 1) {
+        let par1 = document.querySelector(".ID1");
+        par1.innerHTML = Week(8);
+        let par2 = document.querySelector(".ID2");
+        par2.innerHTML = Week(9);
+        let par3 = document.querySelector(".ID3");
+        par3.innerHTML = Week(10);
+        let par4 = document.querySelector(".ID4");
+        par4.innerHTML = Week(11);
+        let par6 = document.querySelector(".ID6");
+        par6.innerHTML = Week(13);
+      } else {
+        let par1 = document.querySelector(".ID1");
+        par1.innerHTML = Week(1);
+        let par2 = document.querySelector(".ID2");
+        par2.innerHTML = Week(2);
+        let par3 = document.querySelector(".ID3");
+        par3.innerHTML = Week(3);
+        let par4 = document.querySelector(".ID4");
+        par4.innerHTML = Week(4);
+        let par6 = document.querySelector(".ID6");
+        par6.innerHTML = Week(6);
+      }
     }
     change();
   </script>

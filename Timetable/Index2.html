@@ -234,7 +234,9 @@
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">вторник</h4>
+            <h4 class="panel-title">
+              <div class="ID2">вторник</div>
+            </h4>
           </div>
           <ul class="panel-collapse nopadding nomargin">
             <li class="common-list-item row" id="vt1">
@@ -434,7 +436,9 @@
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">среда</h4>
+            <h4 class="panel-title">
+              <div class="ID3">среда</div>
+            </h4>
           </div>
           <ul class="panel-collapse nopadding nomargin">
             <li class="common-list-item row" id="sr11">
@@ -635,7 +639,9 @@
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">четверг</h4>
+            <h4 class="panel-title">
+              <div class="ID4">четверг</div>
+            </h4>
           </div>
           <ul class="panel-collapse nopadding nomargin">
             <li class="common-list-item row" id="ch11">
@@ -770,7 +776,9 @@
         </div>
         <div class="panel panel-default">
           <div class="panel-heading">
-            <h4 class="panel-title">суббота</h4>
+            <h4 class="panel-title">
+              <div class="ID6">суббота</div>
+            </h4>
           </div>
           <ul class="panel-collapse nopadding nomargin">
             <li class="common-list-item row" id="sb1">
@@ -1040,16 +1048,31 @@
   </body>
   <script>
     function change() {
-      let par1 = document.querySelector(".ID1");
-      par1.innerHTML = Week(1);
-      let par2 = document.querySelector(".ID2");
-      par2.innerHTML = Week(2);
-      let par3 = document.querySelector(".ID3");
-      par3.innerHTML = Week(3);
-      let par4 = document.querySelector(".ID4");
-      par4.innerHTML = Week(4);
-      let par6 = document.querySelector(".ID6");
-      par6.innerHTML = Week(6);
+      date = new Date();
+      result = date.getWeek();
+      if (result % 2 == 1) {
+        let par1 = document.querySelector(".ID1");
+        par1.innerHTML = Week(1);
+        let par2 = document.querySelector(".ID2");
+        par2.innerHTML = Week(2);
+        let par3 = document.querySelector(".ID3");
+        par3.innerHTML = Week(3);
+        let par4 = document.querySelector(".ID4");
+        par4.innerHTML = Week(4);
+        let par6 = document.querySelector(".ID6");
+        par6.innerHTML = Week(6);
+      } else {
+        let par1 = document.querySelector(".ID1");
+        par1.innerHTML = Week(8);
+        let par2 = document.querySelector(".ID2");
+        par2.innerHTML = Week(9);
+        let par3 = document.querySelector(".ID3");
+        par3.innerHTML = Week(10);
+        let par4 = document.querySelector(".ID4");
+        par4.innerHTML = Week(11);
+        let par6 = document.querySelector(".ID6");
+        par6.innerHTML = Week(13);
+      }
     }
     change();
   </script>
