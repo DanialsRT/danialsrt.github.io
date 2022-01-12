@@ -22,17 +22,12 @@ function highlighting() {
   } else {
     result = "Знаменатель";
   }
-  //document.getElementById('result').innerHTML = result;
-  let ds = new Date();
-  let n = ds.getDay();
-  //document.getElementById('n').innerHTML = n;
   let date = new Date();
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let time = 0;
   hours = hours * 100;
   time = hours + minutes;
-  //document.getElementById('timedisplay1').innerHTML = time;
   if (time > 900 && time <= 1105) {
     switch (n) {
       case 1:
@@ -137,27 +132,6 @@ function highlighting() {
 window.addEventListener("load", function () {
   highlighting();
 });
-
-function getDate() {
-  let date = new Date();
-  let day = date.getDate();
-  let month = date.getMonth() + 1;
-  let year = date.getYear() - 100;
-  let hours = date.getHours();
-  let minutes = date.getMinutes();
-  let seconds = date.getSeconds();
-  if (seconds < 10) {
-    seconds = "0" + seconds;
-  }
-  if (minutes < 10) {
-    minutes = "0" + minutes;
-  }
-  if (hours < 10) {
-    hours = "0" + hours;
-  }
-  //document.getElementById('timedisplay').innerHTML = day + '.' + month + '.' + year + ' ' + hours + ':' + minutes + ':' + seconds;
-}
-//setInterval(getDate, 0);
 
 function Week(k) {
   let m = new Date();
