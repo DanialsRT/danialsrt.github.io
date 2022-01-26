@@ -1,0 +1,36 @@
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<title>Часы</title>
+<head>
+<script type="text/javascript">
+function digitalWatch() {
+var date = new Date();
+var hours = date.getHours();
+var minutes = date.getMinutes();
+var seconds = date.getSeconds();
+if (hours < 10) hours = "0" + hours;
+if (minutes < 10) minutes = "0" + minutes;
+if (seconds < 10) seconds = "0" + seconds;
+document.getElementById("digital_watch").innerHTML = hours + ":" + minutes + ":" + seconds;
+setTimeout("digitalWatch()", 1000);
+}
+</script>
+<style>
+#digital_watch{
+letter-spacing: 5px;
+color: #777;
+font-size: 30px;
+border: 2px solid #777;
+padding: 10px;
+width: 160px;
+box-shadow: 1px 1px 3px #BCCCCF,
+-1px -1px 2px #BCCCCF;
+}
+</style>
+</head>
+
+<body onload="digitalWatch()">
+<p id="digital_watch"></p>
+</body>
+</html>
