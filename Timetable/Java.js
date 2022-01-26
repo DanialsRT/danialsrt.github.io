@@ -15,14 +15,14 @@ Date.prototype.getWeek = function () {
 };
 
 function highlighting() {
-  let mydate = new Date();
-  result = mydate.getWeek();
+  let date = new Date();
+  result = date.getWeek();
   if (result % 2 == 1) {
     result = "Числитель";
   } else {
     result = "Знаменатель";
   }
-  let date = new Date();
+  let n = date.getDay();
   let hours = date.getHours();
   let minutes = date.getMinutes();
   let time = 0;
