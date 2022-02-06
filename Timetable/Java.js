@@ -162,9 +162,9 @@ function Week(k) {
   D0 > 7 ? (D0 -= 7) : D0;
   let DG = m.getYear(); //Год
   let D3 = m.getDay(); //День недели
+  D3 == 0 ? (D3 = 7) : D3;
   let D1 = m.getDate(); //День
   let D2 = m.getMonth(); //Месяц
-  console.log;
   m = new Date(DG, D2, D1 + k - D3);
   DG = m.getYear(); //Год
   D1 = m.getDate(); //День
