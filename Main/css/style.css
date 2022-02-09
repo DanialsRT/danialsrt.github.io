@@ -488,3 +488,10 @@ button[data-balloon] {
   width: 100%;
 }
 /*Tooltips END*/
+/* None select */
+.unselectable {
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
